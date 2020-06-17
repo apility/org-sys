@@ -1,0 +1,21 @@
+{
+    "name": "apility/org-sys",
+    "description": "An integration for OrgSys",
+    "type": "library",
+    "license": "Apility Software Licence v1.0",
+    "authors": [
+        {
+            "name": "Tommy Stigen Olsen",
+            "email": "tommysolsen@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "^6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Apility\\OrgSys\\": "src/"
+        }
+    }
+}
