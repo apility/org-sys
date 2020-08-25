@@ -104,13 +104,13 @@ class Client
     ]);
   }
 
-  public function createPayment($customer, $amount)
+  public function createPayment($customer, $amount, $payload = [])
   {
     return $this->put('Payment', [
-      'query' => [
+      'query' => array_merge($payload, [
         'nameId' => $customer->NameId,
         'amount' => $amount / 100,
-      ]
+      ])
     ]);
   }
 
