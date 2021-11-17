@@ -107,7 +107,7 @@ class Client
   public function createPayment($customer, $amount, $extra = [])
   {
     return $this->put('Payment', [
-      'query' => array_merge([
+      'query' => array_merge($extra, [
         'nameId' => $customer->NameId,
         'amount' => $amount / 100,
       ])
